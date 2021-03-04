@@ -1,0 +1,97 @@
+.box-show {
+    width: 100%;
+    z-index: 99;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    position: absolute;
+    top: 80px;
+    line-height: 1.6;
+
+    li {
+        list-style: none;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #f7f7f7;
+        .item {
+            display: flex;
+            width: 100%;
+            padding: 10px 20px;
+            color: #333333;
+            height: 200px;
+
+            .box-img {
+                flex-basis: calc((100% /12) *3);
+                img {
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .box-content {
+                flex-basis: calc((100% /12) *9);
+
+                .description {
+                    display: -webkit-box;
+                    margin: 0 auto;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .name-book {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                .field-book {
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.box-loading {
+    width: 100%;
+    z-index: 99;
+    height: 80px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+
+    .ant-spin-text {
+        color: rgb(0 ,158 ,127);
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+
+
+@import "../../scss/mixins";
+
+
+@include md-down {
+
+    .box-show {
+        li {
+            .item {
+                .box-content {
+                    .description {
+                        -webkit-line-clamp: 3;
+                    }
+                    .name-book {
+                        font-size: 16px;
+
+                    }
+                    .field-book {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

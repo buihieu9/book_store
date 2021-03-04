@@ -1,0 +1,40 @@
+html {
+    font-size: 62.5%;
+}
+
+.Hero {
+    background-image: url('https://res.cloudinary.com/dofqucuyy/image/upload/v1585755127/Books/background_etmzc6.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+
+    .title {
+        font-size: 5.5rem;
+        font-weight: 700;
+    }
+    p {
+        font-size: 2rem;
+        color: #919191;
+    }
+}
+
+@import "../scss/mixins";
+
+
+@include md-down {
+    .Hero {
+        background-position: left;
+        text-align: center;
+        padding: 0 10px;
+        .title {
+            font-size: 4rem;
+        }
+    }
+}

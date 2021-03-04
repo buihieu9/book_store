@@ -1,0 +1,101 @@
+.box-detail {
+    .btn-back {
+        .ant-button {
+            color: red;
+        }
+    }
+
+    .box-img {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 50%;
+            // height: 450px;
+            height: 100%;
+        }
+    }
+
+    .box-content {
+        margin-top: 52px;
+        .name-book {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .btn-card {
+            color: #FFFFFF;
+            background: #009E7F;
+            display: inline-block;
+            padding: 1rem;
+            border-radius: 3rem;
+            font-size: 1.6rem;
+            cursor: pointer;
+            transition:all .2s ;
+            &:hover {
+                opacity: .9;
+            }
+            &:active {
+                transform: scale(.9);
+            }
+          }
+
+
+
+        .box-des {
+            line-height: 1.6;
+            margin: 40px 0;
+            font-size: 16px;
+            .des {
+                display: -webkit-box;
+                margin: 0 auto;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .show-des{
+                display: block;
+            }
+            .read-more {
+                cursor: pointer;
+                color: var(--color-button);
+                font-weight: 600;
+            }
+
+
+        }
+        .price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-button);
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@import "../mixins";
+@include  md-down {
+    .box-detail {
+        flex-direction: column;
+
+        // .box-img {
+        //     img{
+        //         width: 450px;
+        //          height: 450px;
+        //     }
+        // }
+    }
+}
+
+@include sm {
+    .box-detail {
+        flex-direction: column;
+
+        .box-img {
+            img{
+                width: 450px;
+                 height: 450px;
+            }
+        }
+    }
+}

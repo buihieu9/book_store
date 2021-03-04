@@ -1,0 +1,12 @@
+:root {
+    --color-main: #ffffff;
+    --color-background: #F7F7F7;
+    --color-text: #cdcdcd;
+    --color-button:rgb(0 158 127);
+ }
+
+  // Break point
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
